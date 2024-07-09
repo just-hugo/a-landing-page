@@ -1,0 +1,183 @@
+:root {
+  --black: #212120;
+  --dark-grey: #282828;
+  --light-grey: #f2f2f2;
+  --off-white: #fafafa;
+  --light-blue: #21b5e8;
+}
+h1 {
+  color: var(--black);
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  transform: scale(1.075);
+  color: var(--light-blue);
+}
+body {
+  background-color: var(--black);
+}
+nav {
+  background-color: var(--black);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+.navbar-brand img {
+  text-shadow: 4px 3px 3px rgb(255, 255, 255);
+}
+.nav-link {
+  color: var(--off-white);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  transform: scale(1.075);
+  color: var(--light-blue);
+}
+.blue {
+  color: var(--light-blue);
+}
+.shadow {
+  text-shadow: 4px 3px 3px rgb(0, 0, 0);
+}
+header {
+  position: relative;
+  background-color: var(--black);
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+header h1 {
+  color: var(--off-white);
+  font-variant: small-caps;
+  text-shadow: 4px 3px 3px rgb(0, 0, 0);
+}
+header p {
+  font-variant: small-caps;
+  text-shadow: 4px 3px 3px rgba(0, 0, 0, 1);
+}
+#player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100dvh;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+  opacity: 0.55;
+  z-index: 1;
+  box-shadow: inset 3px 0px 8px 6px rgba(0, 0, 0, 0.75),
+    inset 0px 0px 8px 5px rgba(144, 144, 144, 0.75);
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url("assets/dot.png") var(--black) no-repeat center center
+      scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+.video-header-text {
+  font-size: 3rem;
+}
+.video-header-subtext {
+  font-size: 2rem;
+}
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.services {
+  color: var(--black);
+  background-color: var(--off-white);
+}
+.services h1 {
+  margin-bottom: 2rem;
+}
+.services img {
+  max-width: 15rem;
+  border-radius: 25px;
+  box-shadow: 5px 7px 10px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 5px 7px 10px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 5px 7px 10px 3px rgba(0, 0, 0, 0.25);
+}
+.getting-started {
+  color: var(--black);
+  background-color: var(--light-grey);
+}
+
+.contact {
+  color: var(--light-grey);
+  background-color: var(--dark-grey);
+}
+.contact h1 {
+  color: var(--off-white);
+}
+footer {
+  color: var(--light-grey);
+  background-color: var(--black);
+}
+a {
+  color: inherit;
+}
+hr {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 1px;
+}
+
+/* mobile */
+@media (max-width: 992px) {
+  .nav-link {
+    margin: 0rem;
+    padding-left: 0rem;
+    padding-right: 0.85rem;
+    font-size: 1rem;
+  }
+  header {
+    position: relative;
+    background-color: var(--black);
+    height: 28dvh;
+    min-height: 20dvh;
+  }
+  #player {
+    top: 50%;
+  }
+  .video-header-text {
+    font-size: 2rem;
+  }
+  .video-header-subtext {
+    font-size: 1.5rem;
+  }
+}
